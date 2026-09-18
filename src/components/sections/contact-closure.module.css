@@ -1,0 +1,62 @@
+.closure {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr);
+  column-gap: clamp(2rem, 4vw, 5rem);
+  row-gap: clamp(3rem, 5vw, 6rem);
+  padding: clamp(4rem, 7vw, 8rem) var(--page-gutter) clamp(3rem, 6vw, 7rem);
+  background: var(--paper-secondary);
+  scroll-margin-top: 0;
+}
+
+.bridge {
+  max-width: 21ch;
+  font-size: clamp(1rem, 1.15vw, 1.375rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.question {
+  max-width: 22ch;
+  font-size: clamp(2.75rem, 4.4vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.contact { grid-column: 2; min-width: 0; }
+.contact > p { margin-bottom: 0.75rem; font-size: 1rem; }
+
+.email {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding-block: 0.125em;
+  color: var(--accent);
+  font-size: clamp(2rem, 4.9vw, 6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.025em;
+  text-underline-offset: 0.15em;
+  overflow-wrap: anywhere;
+  transition: color var(--motion-fast) ease;
+}
+
+.email:hover, .email:focus-visible { color: var(--ink); }
+
+@media (max-width: 63.999rem) {
+  .closure { grid-template-columns: minmax(0, 1fr); row-gap: 2.5rem; }
+  .bridge { max-width: 32ch; }
+  .question { max-width: 21ch; font-size: clamp(2.5rem, 6vw, 4rem); }
+  .contact { grid-column: 1; }
+  .email { font-size: clamp(2rem, 6.6vw, 4.5rem); }
+}
+
+@media (max-width: 29.999rem) {
+  .closure { padding-block: 3rem 2.5rem; }
+  .question { font-size: clamp(2.125rem, 9vw, 2.75rem); }
+  .email { font-size: clamp(1.75rem, 7.5vw, 2rem); letter-spacing: -0.045em; }
+}
