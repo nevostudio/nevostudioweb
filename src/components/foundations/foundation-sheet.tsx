@@ -3,11 +3,13 @@ import { EditorialLabel } from "@/components/ui/editorial-label";
 import { StatusLabel } from "@/components/ui/status-label";
 
 const palette = [
-  { name: "Papel", code: "#F3F0E8", role: "El espacio para leer.", className: "swatch--paper" },
-  { name: "Tinta", code: "#191B19", role: "La voz principal.", className: "swatch--ink" },
-  { name: "Rojo editorial", code: "#B93426", role: "Una señal con intención.", className: "swatch--accent" },
-  { name: "Gris de lectura", code: "#62665F", role: "El segundo nivel.", className: "swatch--muted" },
-  { name: "Línea", code: "#D5D3CA", role: "Separar sin interrumpir.", className: "swatch--line" },
+  { name: "Blanco", code: "#FFFFFF", role: "El espacio para leer.", className: "swatch--paper" },
+  { name: "Negro", code: "#0A0A0A", role: "La voz principal.", className: "swatch--ink" },
+  { name: "Naranja", code: "#FF4B00", role: "Una señal con intención.", className: "swatch--accent" },
+  { name: "Gris 50", code: "#F4F4F2", role: "Fondos sutiles.", className: "swatch--secondary" },
+  { name: "Gris 400", code: "#9A9A97", role: "Detalles y elementos auxiliares.", className: "swatch--neutral" },
+  { name: "Gris 800", code: "#2A2A28", role: "El segundo nivel.", className: "swatch--muted" },
+  { name: "Gris 100", code: "#ECECEA", role: "Separar sin interrumpir.", className: "swatch--line" },
 ] as const;
 
 export function FoundationSheet() {
@@ -58,11 +60,11 @@ export function FoundationSheet() {
       <section id="color" tabIndex={-1} aria-labelledby="color-heading" className="specimen-section">
         <div className="section-heading">
           <EditorialLabel number="02">Color</EditorialLabel>
-          <p className="specimen-note">Una paleta, cinco funciones</p>
+          <p className="specimen-note">Paleta NEVO · Brand Book v1.0</p>
         </div>
         <div className="section-intro editorial-grid">
-          <h2 id="color-heading" className="type-heading">Papel. Tinta.<br /><span className="text-accent">Un punto de atención.</span></h2>
-          <p className="type-body text-muted">El fondo deja respirar. La tinta da estructura. El rojo aparece donde hay algo que merece una segunda mirada.</p>
+          <h2 id="color-heading" className="type-heading">Blanco. Negro.<br /><span>Un punto de atención.</span></h2>
+          <p className="type-body text-muted">Blanco y neutros para los fondos. Negro para la estructura. Naranja para acciones y momentos clave. El gris oscuro mantiene la legibilidad del texto secundario.</p>
         </div>
         <ul className="palette" aria-label="Paleta de color">
           {palette.map((color, index) => (

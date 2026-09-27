@@ -7,7 +7,7 @@ export function SiteHeader({ items = homeNavigation, specimen = false }: { items
       <a className="wordmark" href="#inicio" aria-label={`${site.name}, inicio`}>
         NEVO<span>STUDIO</span><span className="wordmark__point" aria-hidden="true" />
       </a>
-      <p className="header-caption">Tecnología para<br />revistas y medios.</p>
+      <p className="header-caption">{specimen ? <>Tecnología para<br />revistas y medios.</> : <>Análisis de anunciantes.<br />Revistas e informes.</>}</p>
       <SiteNavigation items={items} label={specimen ? "Índice del cuaderno" : "Navegación principal"} />
     </header>
   );

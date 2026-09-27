@@ -11,17 +11,17 @@ export function AdvertiserDemo() {
     <section id="analisis-anunciantes" tabIndex={-1} aria-labelledby="analysis-title" className={styles.section}>
       <header className={styles.introduction}>
         <div>
-          <p className={styles.kicker}>Empezamos por una revista.</p>
+          <p className={styles.kicker}>Así pasa una revista a ser un informe.</p>
           <h2 id="analysis-title">Todos sus anunciantes.<br /><span>En un mismo informe.</span></h2>
         </div>
         <div className={styles.productNote}>
-          <StatusLabel>En desarrollo</StatusLabel>
-          <p>Analizamos la revista, identificamos sus anunciantes y reunimos la información disponible sobre ellos.</p>
+          <StatusLabel>Análisis por encargo</StatusLabel>
+          <p>Este ejemplo muestra el recorrido: revisamos la revista, identificamos todos sus anunciantes y reunimos su información en un informe. La revista y los negocios de esta demostración son ficticios.</p>
         </div>
       </header>
       <AnalysisJourney>
         <div className={styles.stage} data-analysis-stage>
-          <div className={styles.stageTop} data-analysis-size-probe><p>{demoPublication.disclosure}</p><span>Producto en desarrollo</span></div>
+          <div className={styles.stageTop} data-analysis-size-probe><p>{demoPublication.disclosure}</p><span>Ejemplo del proceso</span></div>
           <div className={styles.controls} role="group" aria-label="Recorrer el análisis ilustrativo de la revista">
             {analysisSteps.map((step, index) => <button key={step.label} type="button" data-analysis-choice={index} data-progress={step.progress} aria-pressed={index === 0} aria-describedby="analysis-description">{step.label}</button>)}
           </div>

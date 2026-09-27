@@ -24,7 +24,7 @@ export function HeroMotion({ children }: { children: ReactNode }) {
     function setProgress(value: number) {
       element!.style.setProperty("--reading", value.toFixed(4));
       range!.value = String(Math.round(value * 100));
-      range!.setAttribute("aria-valuetext", value < 0.3 ? "Publicación" : value > 0.7 ? "Información organizada" : "De publicación a información");
+      range!.setAttribute("aria-valuetext", value < 0.3 ? "Revista" : value > 0.7 ? "Informe de anunciantes" : "Anunciantes e información");
     }
     function update() {
       frame = 0;

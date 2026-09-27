@@ -1,7 +1,6 @@
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Hero } from "@/components/sections/hero";
-import { RepeatedWork } from "@/components/sections/repeated-work";
 import { AdvertiserDemo } from "@/components/advertiser-demo/advertiser-demo";
 import { ContactClosure } from "@/components/sections/contact-closure";
 
@@ -11,7 +10,6 @@ export default function Home() {
       <SiteHeader />
       <main id="contenido" tabIndex={-1}>
         <Hero />
-        <RepeatedWork />
         <AdvertiserDemo />
         <ContactClosure />
       </main>

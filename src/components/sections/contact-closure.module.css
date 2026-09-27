@@ -26,26 +26,27 @@
 }
 
 .contact { grid-column: 2; min-width: 0; }
-.contact > p { margin-bottom: 0.75rem; font-size: 1rem; }
+.contact > p { max-width: 55ch; margin-bottom: 1.5rem; font-size: 1rem; line-height: 1.6; }
 
 .email {
   display: inline-block;
   max-width: 100%;
   min-height: 2.75rem;
   padding-block: 0.125em;
-  color: var(--accent);
+  color: var(--ink);
   font-size: clamp(2rem, 4.9vw, 6rem);
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.05em;
   text-decoration: underline;
+  text-decoration-color: var(--accent);
   text-decoration-thickness: 0.025em;
   text-underline-offset: 0.15em;
   overflow-wrap: anywhere;
   transition: color var(--motion-fast) ease;
 }
 
-.email:hover, .email:focus-visible { color: var(--ink); }
+.email:hover, .email:focus-visible { color: var(--ink); text-decoration-color: var(--ink); }
 
 @media (max-width: 63.999rem) {
   .closure { grid-template-columns: minmax(0, 1fr); row-gap: 2.5rem; }
