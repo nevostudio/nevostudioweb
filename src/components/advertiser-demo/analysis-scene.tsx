@@ -21,7 +21,7 @@ export function AnalysisScene() {
           <span className={styles.selection}>Anunciante identificado</span>
           <span className={styles.sourceReference}>{demoPublication.name} · Página {advertiser.page}</span>
           <div className={styles.recordData}>
-            <span>Información recopilada<small>Contenido ilustrativo</small></span>
+            <span>{advertiser.sector}<small>{advertiser.web ?? "Web no disponible"}</small></span>
             <span>{demoPublication.name}<small>Página {advertiser.page}</small></span>
           </div>
         </div>

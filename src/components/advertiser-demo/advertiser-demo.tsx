@@ -33,11 +33,14 @@ export function AdvertiserDemo() {
         </div>
         <div className={styles.readingPublication}>
           <p className={styles.disclosure}>{demoPublication.disclosure}</p>
-          <Publication />
+          <details className={styles.sourceDetails}>
+            <summary>Explorar la revista de muestra <span>4 páginas · 3 anunciantes ficticios</span></summary>
+            <Publication />
+          </details>
         </div>
       </AnalysisJourney>
       <div id="informe-muestra" tabIndex={-1} className={styles.collected}>
-        <h3>De sus páginas a un informe.</h3>
+        <h3>Esto es lo que recibe tu equipo.</h3>
         <ReportDocument />
       </div>
     </section>

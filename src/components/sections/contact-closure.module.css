@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 29.999rem) {
-  .closure { padding-block: 3rem 2.5rem; }
+  .closure { padding-block: 2rem; row-gap: 1.5rem; }
   .question { font-size: clamp(2.125rem, 9vw, 2.75rem); }
-  .email { font-size: clamp(1.75rem, 7.5vw, 2rem); letter-spacing: -0.045em; }
+  .email { font-size: clamp(1.5rem, 7vw, 2rem); letter-spacing: -0.045em; min-height: 48px; }
 }

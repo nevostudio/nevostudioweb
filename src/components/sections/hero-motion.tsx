@@ -28,23 +28,20 @@ export function HeroMotion({ children }: { children: ReactNode }) {
     }
     function update() {
       frame = 0;
-      if (reduced.matches) return;
+      if (reduced.matches || !desktop.matches) return;
       if (!manual) {
         const rect = journey!.getBoundingClientRect();
-        const sceneRect = scene!.getBoundingClientRect();
-        const progress = desktop.matches
-          ? clamp(-rect.top / Math.max(1, journey!.offsetHeight - screen!.offsetHeight))
-          : clamp((window.innerHeight * 0.65 - sceneRect.top) / (sceneRect.height * 0.65));
+        const progress = clamp(-rect.top / Math.max(1, journey!.offsetHeight - screen!.offsetHeight));
         setProgress(progress);
       }
       const reveal = clamp((window.innerHeight - perspective!.getBoundingClientRect().top) / (window.innerHeight * 0.8));
       element!.style.setProperty("--perspective", reveal.toFixed(4));
     }
-    function schedule() { if (!frame) frame = window.requestAnimationFrame(update); }
+    function schedule() { if (!frame && !reduced.matches && desktop.matches) frame = window.requestAnimationFrame(update); }
     function onScroll() { manual = false; schedule(); }
     function onInput() { manual = true; setProgress(Number(range!.value) / 100); }
     function onPointer(event: PointerEvent) {
-      if (reduced.matches || !finePointer.matches) return;
+      if (reduced.matches || !desktop.matches || !finePointer.matches) return;
       const rect = scene!.getBoundingClientRect();
       scene!.style.setProperty("--pointer-x", ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3));
       scene!.style.setProperty("--pointer-y", ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3));
@@ -55,7 +52,9 @@ export function HeroMotion({ children }: { children: ReactNode }) {
     }
     function configure() {
       element!.dataset.motion = reduced.matches ? "reduced" : "full";
-      if (reduced.matches) {
+      if (reduced.matches || !desktop.matches) {
+        cancelAnimationFrame(frame);
+        frame = 0;
         setProgress(1);
         element!.style.setProperty("--perspective", "1");
         resetPointer();
@@ -71,6 +70,7 @@ export function HeroMotion({ children }: { children: ReactNode }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", schedule, { passive: true });
     reduced.addEventListener("change", configure);
+    desktop.addEventListener("change", configure);
     range.addEventListener("input", onInput);
     scene.addEventListener("pointermove", onPointer, { passive: true });
     scene.addEventListener("pointerleave", resetPointer);
@@ -82,6 +82,7 @@ export function HeroMotion({ children }: { children: ReactNode }) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", schedule);
       reduced.removeEventListener("change", configure);
+      desktop.removeEventListener("change", configure);
       range.removeEventListener("input", onInput);
       scene.removeEventListener("pointermove", onPointer);
       scene.removeEventListener("pointerleave", resetPointer);

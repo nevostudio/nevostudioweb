@@ -1,19 +1,29 @@
-import { demoAdvertisers, demoPublication } from "@/content/advertiser-demo";
-import styles from "./advertiser-demo.module.css";
+import { demoAdvertisers } from "@/content/advertiser-demo";
+import styles from "./report-document.module.css";
 
 export function AdvertiserRecords() {
   return (
-    <div className={styles.records}>
-      <div className={styles.recordHeading} aria-hidden="true"><span>Anunciante</span><span>Información recopilada</span><span>Fuente en la muestra</span></div>
-      <ul>
-        {demoAdvertisers.map(advertiser => (
-          <li key={advertiser.id}>
-            <strong>{advertiser.name}</strong>
-            <span className={styles.informationSample}><span className={styles.mobileField}>Información recopilada</span>Contenido ilustrativo<span className={styles.informationLines} aria-hidden="true"><i /><i /></span></span>
-            <span><span className={styles.mobileField}>Fuente en la muestra</span>{demoPublication.name} · Página {advertiser.page}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={styles.records} aria-label="Anunciantes ficticios y sus datos de ejemplo">
+      {demoAdvertisers.map((advertiser, index) => (
+        <li key={advertiser.id}>
+          <details className={styles.record} open={index === 0}>
+            <summary>
+              <span className={styles.recordNumber} aria-hidden="true">0{index + 1}</span>
+              <span className={styles.recordIdentity}><strong>{advertiser.name}</strong><span>{advertiser.sector}</span></span>
+              <span className={styles.recordPage}>Pág. {advertiser.page}</span>
+              <span className={styles.toggle} aria-hidden="true" />
+            </summary>
+            <dl className={styles.fields}>
+              <div><dt>Web</dt><dd>{advertiser.web ?? "No disponible"}</dd></div>
+              <div><dt>Email</dt><dd>{advertiser.email ?? "No disponible"}</dd></div>
+              <div><dt>Teléfono</dt><dd>{advertiser.phone ?? "No disponible"}</dd></div>
+              <div><dt>Páginas en la revista</dt><dd>{advertiser.page}</dd></div>
+              <div><dt>Tamaño del anuncio</dt><dd>{advertiser.size}</dd></div>
+              <div><dt>Confianza de detección</dt><dd>{advertiser.confidence} % <span className={styles.exampleLabel}>· ejemplo</span></dd></div>
+            </dl>
+          </details>
+        </li>
+      ))}
+    </ul>
   );
 }
