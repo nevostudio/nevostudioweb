@@ -22,7 +22,7 @@ const plexMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} — Análisis de anunciantes de revistas`,
+  title: `${site.name} — Encuentra tus próximos anunciantes`,
   description: site.description,
   robots: { index: false, follow: false },
 };

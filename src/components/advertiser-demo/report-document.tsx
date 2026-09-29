@@ -37,7 +37,7 @@ export function ReportDocument() {
       <AdvertiserRecords />
       <footer className={styles.foot}>
         <p><strong>La información disponible varía.</strong> «No disponible» indica un campo sin dato. «Con contacto» cuenta las fichas con email o teléfono de ejemplo. Los dominios .example y el teléfono con X no son contactos operativos.</p>
-        <p><strong>Revisión recomendada.</strong> La confianza se refiere a la detección automática; no verifica los datos de contacto ni garantiza su exactitud. Los porcentajes de esta muestra también son ficticios.</p>
+        <p><strong>Información para preparar el contacto.</strong> Consulta la actividad de cada empresa y dónde se anuncia para valorar si encaja con tu medio.</p>
       </footer>
     </article>
   );

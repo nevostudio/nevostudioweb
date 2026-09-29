@@ -11,12 +11,12 @@ export function AdvertiserDemo() {
     <section id="analisis-anunciantes" tabIndex={-1} aria-labelledby="analysis-title" className={styles.section}>
       <header className={styles.introduction}>
         <div>
-          <p className={styles.kicker}>Así pasa una revista a ser un informe.</p>
-          <h2 id="analysis-title">Todos sus anunciantes.<br /><span>En un mismo informe.</span></h2>
+          <p className={styles.kicker}>De las páginas a las oportunidades.</p>
+          <h2 id="analysis-title">Potenciales anunciantes.<br /><span>Información para tu equipo.</span></h2>
         </div>
         <div className={styles.productNote}>
-          <StatusLabel>Análisis por encargo</StatusLabel>
-          <p>Este ejemplo muestra el recorrido: revisamos la revista, identificamos todos sus anunciantes y reunimos su información en un informe. La revista y los negocios de esta demostración son ficticios.</p>
+          <StatusLabel>Del análisis al informe</StatusLabel>
+          <p>Así identificamos quién se anuncia en una revista y organizamos su información para que tu equipo valore a quién contactar. La revista y los negocios de esta demostración son ficticios.</p>
         </div>
       </header>
       <AnalysisJourney>
@@ -40,7 +40,7 @@ export function AdvertiserDemo() {
         </div>
       </AnalysisJourney>
       <div id="informe-muestra" tabIndex={-1} className={styles.collected}>
-        <h3>Esto es lo que recibe tu equipo.</h3>
+        <h3>Un punto de partida para tu equipo comercial.</h3>
         <ReportDocument />
       </div>
     </section>

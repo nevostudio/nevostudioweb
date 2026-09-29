@@ -18,7 +18,7 @@ export function Hero() {
               <h1 id="hero-title" className={styles.title}>
                 {hero.title.map((line) => <span key={line}><span>{line}{" "}</span></span>)}
               </h1>
-              <p className={styles.lead}>Analizamos por encargo la revista que elija tu empresa. Identificamos <strong>todos sus anunciantes</strong> y entregamos un informe con la información disponible sobre cada negocio.</p>
+              <p className={styles.lead}>Analizamos las revistas de tu sector e identificamos <strong>quién se está anunciando</strong>. Reunimos su información y los contactos disponibles en un informe para que tu equipo comercial encuentre nuevas oportunidades.</p>
               <div className={styles.actions}>
                 <ActionLink href="#contacto">Solicitar prueba gratis</ActionLink>
                 <ActionLink href="#informe-muestra" variant="text">Ver informe de muestra</ActionLink>
@@ -40,7 +40,7 @@ export function Hero() {
                   </div>
                   <div className={styles.extract}><span>01 / ANUNCIANTES</span><strong>Cada empresa.<br />Cada comercio.</strong><div className={styles.textLines}><i /><i /><i /></div></div>
                   <div className={styles.context}><span>02 / INFORMACIÓN</span><strong>Datos reunidos.<br />Y organizados.</strong><div className={styles.connections}><i /><i /><i /><i /></div></div>
-                  <div className={styles.record}><span>03 / INFORME</span><strong>Todos juntos.<br />Para tu equipo.</strong><span className={styles.recordArrow}>↗</span></div>
+                  <div className={styles.record}><span>03 / OPORTUNIDADES</span><strong>Potenciales clientes.<br />Para tu equipo.</strong><span className={styles.recordArrow}>↗</span></div>
                 </div>
                 <span className={styles.sceneFolio}>REVISTA → ANUNCIANTES → INFORME</span>
               </div>
@@ -54,28 +54,28 @@ export function Hero() {
           </div>
           <div className={styles.bottomLine}>
             <ActionLink href="#presentacion" direction="down" variant="text" className={styles.explore}>{hero.action}</ActionLink>
-            <p>Tú eliges la revista.<br /><span>Nosotros reunimos la información.</span></p>
+            <p>Conoce quién se anuncia en tu sector.<br /><span>Prepara tu próxima conversación comercial.</span></p>
             <div className={styles.progress} aria-hidden="true"><span>01</span><i><b /></i><span>02</span></div>
           </div>
         </div>
       </section>
       <section id="presentacion" tabIndex={-1} className={styles.perspective} data-perspective aria-labelledby="perspective-title">
-        <div className={styles.perspectiveTop}><span>NEVOSTUDIO / CÓMO TRABAJAMOS</span><span>ANÁLISIS POR ENCARGO</span></div>
+        <div className={styles.perspectiveTop}><span>NEVOSTUDIO / CÓMO TRABAJAMOS</span><span>DE LA REVISTA A LA OPORTUNIDAD</span></div>
         <div className={styles.perspectiveComposition}>
           <div className={styles.statement}>
-            <p className={styles.perspectiveLabel}>De sus páginas a tu equipo.</p>
-            <h2 id="perspective-title">TÚ ELIGES<br />LA REVISTA.<br /><span>NOSOTROS<br />LA ANALIZAMOS.</span></h2>
+            <p className={styles.perspectiveLabel}>Una nueva forma de buscar anunciantes.</p>
+            <h2 id="perspective-title">SE ANUNCIAN<br />EN TU SECTOR.<br /><span>PUEDEN SER<br />TUS CLIENTES.</span></h2>
           </div>
           <div className={styles.nextPage} aria-hidden="true">
             <span className={styles.nextPageIndex}>NEVO / INFORME</span>
             <span className={styles.nextPageArrow}>↗</span>
-            <span className={styles.nextPageNote}>ANUNCIANTES.<br />INFORMACIÓN.<br />UNA ENTREGA.</span>
+            <span className={styles.nextPageNote}>ANUNCIANTES.<br />INFORMACIÓN.<br />OPORTUNIDADES.</span>
             <div className={styles.nextPageLines}><i /><i /><i /><i /></div>
           </div>
           <div className={styles.perspectiveCopy}>
             <p>{hero.description}</p>
             <p>{hero.approach}</p>
-            <span className={styles.signature}>Una revista → Todos sus anunciantes → Un informe</span>
+            <span className={styles.signature}>Revistas de tu sector → Información → Oportunidades</span>
           </div>
         </div>
         <div className={styles.perspectiveBottom}><span>EL PROCESO, PASO A PASO.</span><a href="#analisis-anunciantes">Ver un ejemplo de análisis ↓</a></div>

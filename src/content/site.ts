@@ -1,16 +1,16 @@
 export const site = {
   name: "NEVOSTUDIO",
   email: "info@nevostudio.net",
-  description: "Analizamos por encargo todos los anunciantes de una revista y reunimos la información disponible sobre cada empresa o comercio en un informe para tu equipo.",
+  description: "Encuentra potenciales anunciantes para tu medio. Analizamos las revistas de tu sector y reunimos información y contactos disponibles en un informe para tu equipo comercial. Primera prueba gratis.",
 } as const;
 
 export const hero = {
-  eyebrow: "Análisis de anunciantes por encargo",
-  audience: "Una revista → Todos sus anunciantes → Un informe",
-  title: ["TODOS SUS", "ANUNCIANTES.", "EN UN INFORME."],
+  eyebrow: "Oportunidades comerciales para medios",
+  audience: "Revistas de tu sector → Potenciales anunciantes",
+  title: ["ENCUENTRA", "TUS PRÓXIMOS", "ANUNCIANTES."],
   action: "Así hacemos el análisis",
-  description: "Tu empresa nos indica qué revista quiere analizar. Revisamos la publicación completa e identificamos todos los anunciantes que aparecen en ella.",
-  approach: "Reunimos la información disponible sobre cada empresa o comercio y la organizamos en un informe para tu equipo.",
+  description: "Las revistas de tu sector muestran qué empresas están apostando por la publicidad. Analizamos sus páginas para identificar anunciantes que puedan encajar en tu medio.",
+  approach: "Reunimos su actividad, dónde se anuncian y los contactos disponibles. Una base de potenciales clientes para que tu equipo comercial valore oportunidades y prepare el contacto.",
   illustrationCaption: "Ilustración conceptual · Sin datos reales",
 } as const;
 

@@ -19,7 +19,6 @@ export function AdvertiserRecords() {
               <div><dt>Teléfono</dt><dd>{advertiser.phone ?? "No disponible"}</dd></div>
               <div><dt>Páginas en la revista</dt><dd>{advertiser.page}</dd></div>
               <div><dt>Tamaño del anuncio</dt><dd>{advertiser.size}</dd></div>
-              <div><dt>Confianza de detección</dt><dd>{advertiser.confidence} % <span className={styles.exampleLabel}>· ejemplo</span></dd></div>
             </dl>
           </details>
         </li>
